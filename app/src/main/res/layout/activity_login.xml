@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.demomvvm.viewModel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <com.demomvvm.customView.CustomEditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_address"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/etPassword"
+                android:text="@={loginViewModel.mutableEmail}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.demomvvm.customView.CustomEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@={loginViewModel.mutablePassword}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.demomvvm.customView.CustomTextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_gravity="end"
+            android:text="@string/forgot_password"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary" />
+
+        <com.demomvvm.customView.CustomButton
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:onClick="@{() -> loginViewModel.onSignInClick()}"/>
+
+        <com.demomvvm.customView.CustomTextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/register"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+</layout>

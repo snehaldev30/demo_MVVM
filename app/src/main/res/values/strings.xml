@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DEMO MVVM</string>
+
+
+    <!-- url -->
+    <string name="BASE_URL"></string>
+
+    // error messages
+    <string name="timeout_error">Request timed out.</string>
+    <string name="server_error">Something went wrong.</string>
+    <string name="connection_error">Unable to connect to server.</string>
+    <string name="no_connection">No internet connection.</string>
+    <string name="parser_error">Could not parse JSON.</string>
+
+
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+</resources>
